@@ -1,6 +1,10 @@
-body{
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
   background-color: #AB3428;
   font-family:'Open Sans', sans-serif;
+  background-image: linear-gradient(#F0544F, #DF4678, #F0544F);
 }
 
 form{
@@ -49,9 +53,9 @@ form{
 }
 
 #submit{
-    background-color: white;
+    background-color: #761132;
     border: none;
-    color: grey;
+    color: white;
     padding: 9px 32px;
     text-decoration: none;
     margin: 2px 4px;
@@ -71,7 +75,7 @@ form{
   animation: load7 1.8s infinite ease-in-out;
 }
 .loader {
-  color: #000000;
+  color: #ffffff;
   font-size: 10px;
   margin: 80px auto;
   position: relative;
