@@ -24,16 +24,27 @@ $("#submit").on('click', function(event){
     response.data.children.forEach(function(thread){
     //`` allow to enter variables with ${}
       html +=`
-      <h2>${thread.data.title}</h2>
-      <h4> Score: ${thread.data.score} </h4>
-      <h5> Author: ${thread.data.author} </h5>
-      `;
+      <div class="postbody">
+      <div class="posttitle">${thread.data.title}</div>
+      <div class="info"> Author: ${thread.data.author} | Score: ${thread.data.score} </div>
 
-      thread.data.preview.images.forEach(function(image){
-          html +=`
-          <img class="pic" src="${image.source.url}">
-          `
-      });
+      `;
+      try{
+        thread.data.preview.images.forEach(function(image){
+            html +=`
+            <a href="${image.source.url}" target="_blank">
+            <img class="pic" src="${image.source.url}">
+            </a>
+            </div>
+            `
+        });
+      }
+      catch(err){
+        console.log(err);
+      }
+      html +=`</div>` //close postbody
+
+
     });
 
 
