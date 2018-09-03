@@ -4,7 +4,10 @@ html, body{
   margin: 0;
   background-color: #AB3428;
   font-family:'Open Sans', sans-serif;
-  background-image: linear-gradient(#F0544F, #DF4678, #F0544F);
+  background-image: linear-gradient(#F0544F, #DF4678);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
 }
 
 form{
